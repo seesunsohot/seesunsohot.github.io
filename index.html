@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>seesunsohot.ai</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site header">
+      <div class="theme-controls" aria-label="Theme controls">
+        <button class="theme-button" type="button" data-theme-button="night" aria-label="Night mode">
+          <span class="theme-icon moon" aria-hidden="true"></span>
+        </button>
+        <button class="theme-button" type="button" data-theme-button="day" aria-label="Day mode">
+          <span class="theme-icon sun" aria-hidden="true"></span>
+        </button>
+      </div>
+      <a class="site-title" href="index.html" aria-label="seesunsohot.ai">
+        <img src="images/seesunsohot_logo.png" alt="seesunsohot.ai" />
+      </a>
+    </header>
+
+    <main class="home">
+      <section class="intro" aria-labelledby="intro-title">
+        <h1 id="intro-title">
+          Seesun Sohot<br />
+          Graphic Designer<br />
+          Exhibition, Type<br />
+          Lettering &amp; Visuals
+        </h1>
+        <a
+          class="instagram-link"
+          href="https://www.instagram.com/seesunsohot"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram @seesunsohot
+        </a>
+        <div class="drawing-board" aria-label="Drawing board">
+          <canvas id="drawing-canvas"></canvas>
+        </div>
+      </section>
+
+      <section class="index-list" aria-label="Project index">
+        <div class="category">
+          <h2>Exhibition</h2>
+          <ul>
+            <li><button type="button" data-project="silent-room">Silent Room Archive</button></li>
+            <li><button type="button" data-project="white-index">White Index 2047</button></li>
+            <li><button type="button" data-project="soft-display">Soft Display Notes</button></li>
+            <li><button type="button" data-project="paper-hall">Paper Hall Studies</button></li>
+          </ul>
+        </div>
+
+        <div class="category">
+          <h2>Graphic</h2>
+          <ul>
+            <li><button type="button" data-project="annual-reader">Annual Reader System</button></li>
+            <li><button type="button" data-project="city-poster">City Poster Sequence</button></li>
+            <li><button type="button" data-project="museum-fold">Museum Fold Series</button></li>
+            <li><button type="button" data-project="plain-forms">Plain Forms Identity</button></li>
+            <li><button type="button" data-project="desk-calendar">Desk Calendar Drafts</button></li>
+          </ul>
+        </div>
+
+        <div class="category">
+          <h2>Lettering</h2>
+          <ul>
+            <li><button type="button" data-project="warm-serif">Warm Serif Experiments</button></li>
+            <li><button type="button" data-project="sign-paint">Sign Paint Practice</button></li>
+            <li><button type="button" data-project="mono-note">Mono Note Letterforms</button></li>
+            <li><button type="button" data-project="festival-type">Festival Type Study</button></li>
+          </ul>
+        </div>
+
+        <div class="category">
+          <h2>Font</h2>
+          <ul>
+            <li><button type="button" data-project="pantheon">Pantheon</button></li>
+            <li><button type="button" data-project="sample-grotesk">Sample Grotesk</button></li>
+            <li><button type="button" data-project="index-serif">Index Serif</button></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <aside class="project-panel" aria-hidden="true" aria-labelledby="panel-title">
+      <div class="panel-topline">
+        <p id="panel-date">Example Project, May 2047</p>
+        <button class="close-panel" type="button" aria-label="Close project">[ X ]</button>
+      </div>
+
+      <div class="panel-content">
+        <figure class="project-figure">
+          <a id="panel-image-link" href="#" target="_blank" rel="noreferrer" aria-label="Open project link">
+            <img id="panel-image" src="images/mood.png" alt="" />
+          </a>
+        </figure>
+
+        <div class="project-heading">
+          <h2 id="panel-title">Example Project 01</h2>
+          <p id="panel-subtitle">Visual system for a temporary exhibition</p>
+        </div>
+
+        <div class="project-meta">
+          <p id="panel-meta">
+            Client: Dummy Studio<br />
+            Category: Graphic Design<br />
+            Design: Seesun Sohot
+          </p>
+        </div>
+
+        <div class="project-description">
+          <p id="panel-description">
+            This dummy project explores a quiet visual rhythm through oversized type,
+            strict margins, and a compact information system. The work includes printed
+            matter, exhibition captions, digital announcements, and lettering tests.
+          </p>
+          <p>
+            Materials are arranged with a simple black-and-white structure so every
+            project can be read quickly while still leaving room for detail, scale, and
+            texture.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="panel-scrim" hidden></div>
+    <div class="apocalypse-overlay" aria-hidden="true">
+      <div class="apocalypse-smoke"></div>
+      <div class="apocalypse-fire"></div>
+      <div class="apocalypse-rubble"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
