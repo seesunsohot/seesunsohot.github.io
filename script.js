@@ -158,7 +158,6 @@ const introLines = [
   "Lettering & Visuals"
 ];
 let introTypingTimer = null;
-let introShelveTimer = null;
 let apocalypseClickCount = 0;
 let apocalypseStarted = false;
 let isDrawing = false;
@@ -298,7 +297,6 @@ function typeIntro() {
   if (!introTitle) return;
 
   window.clearTimeout(introTypingTimer);
-  window.clearTimeout(introShelveTimer);
   introTitle.textContent = "";
   introTitle.classList.add("is-typing");
 
@@ -322,21 +320,10 @@ function typeIntro() {
       introTypingTimer = window.setTimeout(typeNextCharacter, 34);
     } else {
       introTitle.classList.remove("is-typing");
-      introShelveTimer = window.setTimeout(shelveIntro, 900);
     }
   }
 
   typeNextCharacter();
-}
-
-function shelveIntro() {
-  const characters = [...document.querySelectorAll(".intro-char")];
-
-  characters.forEach((character, index) => {
-    const reverseIndex = characters.length - index - 1;
-    character.style.transitionDelay = `${reverseIndex * 12}ms`;
-    character.classList.add("is-shelved");
-  });
 }
 
 function updateScrollBlur() {
